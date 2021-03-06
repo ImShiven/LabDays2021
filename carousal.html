@@ -3277,9 +3277,11 @@ textarea.form-control {
 		function close_modal()
             {
                 $("#myModal").css('display', 'none');
+				$('#area1_scroll').css('display', 'block');
+				setTimeout(function(){ auto_start(); }, 3000);
             }
 			$(document).ready(function(){
-				setTimeout(function(){ $('#myModal').css('display', 'block'); }, 3000);
+				setTimeout(function(){ $('#myModal').css('display', 'block'); }, 2000);
 			
 			});
     </script>
@@ -3415,12 +3417,14 @@ textarea.form-control {
 }
 
 </style>	
-<div id="area1_scroll" class="textContainer auto-scrolling">
+<div id="area1_scroll" class="textContainer auto-scrolling" style="display:none;">
  <p id="desc_text" style="font-size: 14px;padding: 5px;">
  This is beautiful Fitness center, the largest recreational fitness center in the Ivy league. Use the left & right arrows to check out different workout areas and you will see why so many of my friends love using it. Here you can play pick-up basketball, go for a jog on the overhead track, or visit the pool when you're in mood for a swim. Lab days facility offer incredible range of recreational opportunities including club sports, fitness classes, and intramural sports. Be sure to visit those tour sports for more details on each of those exciting programs.
  </p>
 </div>
 <script>
+function auto_start()
+{
 var elem = document.getElementById('area1_scroll'); //YOUR DIV ELEMENT WHICH YOU WANT TO SCROLL
 var scroll = 0; //SETTING INITIAL SCROLL TO 0
 
@@ -3432,6 +3436,8 @@ window.setInterval(function(){
  elem.scrollTo({ top: scroll, behavior: 'smooth' }) //SCROLL THE ELEMENT TO THE SCROLL VALUE WITH A SMOOTH BEHAVIOR
  scroll += 1; //AUTOINCREMENT SCROLL
 }, 70); //THIS WILL RUN IN EVERY 50 MILISECONDS
+}
+
 </script>
     <div id="carousel1" class="carousel slide full-height" data-interval="false">
         <!-- Indicators -->
