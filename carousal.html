@@ -72,7 +72,8 @@
 		[role="button"] {
             cursor: pointer;
         }
-.modal-open {
+
+        .modal-open {
             overflow: hidden;
         }
 
@@ -243,7 +244,7 @@
                 width: 900px;
             }
         }
-        
+
         [role="button"] {
             cursor: pointer;
         }
@@ -3214,7 +3215,8 @@ textarea.form-control {
             $('#carousel6').hide();
             $('#carousel7').hide();
 			$('#desc_text').text('This is beautiful Fitness center, the largest recreational fitness center in the Ivy league. Use the left & right arrows to check out different workout areas and you will see why so many of my friends love using it. Here you can play pick-up basketball, go for a jog on the overhead track, or visit the pool when you\'re in mood for a swim. Lab days facility offer incredible range of recreational opportunities including club sports, fitness classes, and intramural sports. Be sure to visit those tour sports for more details on each of those exciting programs.');
-        }
+			auto_start();
+		}
 
         function menu2() {
             $('#carousel1').hide();
@@ -3224,8 +3226,9 @@ textarea.form-control {
             $('#carousel5').hide();
             $('#carousel6').hide();
             $('#carousel7').hide();
-			$('#desc_text').text('Behind me is beautiful arena, the home of basketball in the sports center. With so many championship banners in the arena we feel a great sense of pride and tradition at every practice and home game. Be sure to click on the left & right arrows to see rest of our facilities.');
-        }
+			$('#desc_text').text('Lab days offer a wonderful menu of fitness classes including zumba pilates dance yoda and many others. This is one of the seven multi-purpose rooms where you can see yoga class taking place. Just click on left & right arrow to see some other areas where these exciting fitness opportunities can be experienced.');
+			auto_start();
+		}
 
         function menu3() {
             $('#carousel1').hide();
@@ -3235,8 +3238,8 @@ textarea.form-control {
             $('#carousel5').hide();
             $('#carousel6').hide();
             $('#carousel7').hide();
-			$('#desc_text').text('Lab days offer a wonderful menu of fitness classes including zumba pilates dance yoda and many others. This is one of the seven multi-purpose rooms where you can see yoga class taking place. Just click on left & right arrow to see some other areas where these exciting fitness opportunities can be experienced.');
-			
+			$('#desc_text').text('Behind me is beautiful arena, the home of basketball in the sports center. With so many championship banners in the arena we feel a great sense of pride and tradition at every practice and home game. Be sure to click on the left & right arrows to see rest of our facilities.');
+			auto_start();
         }
 
         function menu4() {
@@ -3247,8 +3250,9 @@ textarea.form-control {
             $('#carousel5').hide();
             $('#carousel6').hide();
             $('#carousel7').hide();
-			$('#desc_text').text('Behind me is beautiful arena, the home of baseball in the sports center. With so many championship banners in the arena we feel a great sense of pride and tradition at every practice and home game. Be sure to click on the left & right arrows to see rest of our facilities.');
-        }
+			$('#desc_text').text('Behind me is the chase Astro turf field, the home of labdays field hockey. It has a beautiful playing surface, built in watering system and plenty of seating for our loyal fans. Be sure to click on the left & right arrows to see rest of our facilities.');
+        auto_start();
+		}
 
         function menu5() {
             $('#carousel1').hide();
@@ -3258,8 +3262,8 @@ textarea.form-control {
             $('#carousel5').show();
             $('#carousel6').hide();
             $('#carousel7').hide();
-			$('#desc_text').text('Behind me is the chase Astro turf field, the home of labdays field hockey. It has a beautiful playing surface, built in watering system and plenty of seating for our loyal fans. Be sure to click on the left & right arrows to see rest of our facilities.');
-        
+			$('#desc_text').text('Behind me is beautiful arena, the home of baseball in the sports center. With so many championship banners in the arena we feel a great sense of pride and tradition at every practice and home game. Be sure to click on the left & right arrows to see rest of our facilities.');
+        auto_start();
 			 }
 
         function menu6() {
@@ -3271,7 +3275,7 @@ textarea.form-control {
             $('#carousel6').show();
             $('#carousel7').hide();
 			$('#desc_text').text('Swimmers and divers have the advantage of exceptional pool and training facilities. The Big Green swimming complex features two pools with a total of thirteen 25-yard lanes as well as two 50-meter lanes. Be sure to click on the left & right arrows to see rest of facilities.');
-       
+			auto_start();
 			}
 		function close_modal()
             {
@@ -3284,76 +3288,6 @@ textarea.form-control {
 			
 			});
     </script>
-	
-
-    <div id="nav">
-        <ul>
-            <li onclick="menu1()" id="menu1" class="active">Recreation Overview</li>
-            <li onclick="menu2()" id="menu2">Basketball</li>
-            <li onclick="menu3()" id="menu3">Fitness</li>
-            <li onclick="menu4()" id="menu4">Baseball</li>
-            <li onclick="menu5()" id="menu5">Hockey</li>
-            <li onclick="menu6()" id="menu6">Swimming</li>
-        </ul>
-    </div>
-<style>
-@keyframes up-to-down {
-    from {
-        opacity: 0.5;
-        transform:translateY(-20%);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-.up-to-down-animation {
-    animation-name: up-to-down;
-    animation-duration: 2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.auto-scrolling
-{
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 81.5% !important;
-    z-index: 999 !important;
-    width: 220px !important;
-    background-color: black !important;
-    color: white !important;
-    opacity: 0.7 !important;
-    padding: 3px !important;
-    overflow-x: hidden !important;
-    overflow-y: auto !important;
-    max-height: 200px !important;
-	margin-bottom: 11px !important;
-}
-
-</style>	
-<div id="area1_scroll" class="textContainer auto-scrolling" style="display:none;">
- <p id="desc_text" style="font-size: 14px;padding: 5px;">
- This is beautiful Fitness center, the largest recreational fitness center in the Ivy league. Use the left & right arrows to check out different workout areas and you will see why so many of my friends love using it. Here you can play pick-up basketball, go for a jog on the overhead track, or visit the pool when you're in mood for a swim. Lab days facility offer incredible range of recreational opportunities including club sports, fitness classes, and intramural sports. Be sure to visit those tour sports for more details on each of those exciting programs.
- </p>
-</div>
-<script>
-function auto_start()
-{
-var elem = document.getElementById('area1_scroll'); //YOUR DIV ELEMENT WHICH YOU WANT TO SCROLL
-var scroll = 0; //SETTING INITIAL SCROLL TO 0
-
-window.setInterval(function(){ 
-
- if(elem.scrollTop > scroll)
-  scroll = elem.scrollTop;
-
- elem.scrollTo({ top: scroll, behavior: 'smooth' }) //SCROLL THE ELEMENT TO THE SCROLL VALUE WITH A SMOOTH BEHAVIOR
- scroll += 1; //AUTOINCREMENT SCROLL
-}, 70); //THIS WILL RUN IN EVERY 50 MILISECONDS
-}
-
-</script>
 	<div id="myModal" class="modal up-to-down-animation" style="display:none;">
         <div class="modal-dialog" style="padding-left: 140px;">
             <div class="modal-content">
@@ -3439,6 +3373,76 @@ window.setInterval(function(){
             </div>
         </div>
     </div>
+
+    <div id="nav">
+        <ul>
+            <li onclick="menu1()" id="menu1" class="active">Recreation Overview</li>
+            <li onclick="menu2()" id="menu2">Fitness</li>
+            <li onclick="menu3()" id="menu3">Basket Ball</li>
+            <li onclick="menu4()" id="menu4">Hockey</li>
+            <li onclick="menu5()" id="menu5">Base Ball</li>
+            <li onclick="menu6()" id="menu6">Swimming</li>
+        </ul>
+    </div>
+<style>
+@keyframes up-to-down {
+    from {
+        opacity: 0.5;
+        transform:translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+.up-to-down-animation {
+    animation-name: up-to-down;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.auto-scrolling
+{
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 81.5% !important;
+    z-index: 999 !important;
+    width: 220px !important;
+    background-color: black !important;
+    color: white !important;
+    opacity: 0.7 !important;
+    padding: 3px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    max-height: 200px !important;
+	margin-bottom: 11px !important;
+}
+
+</style>	
+<div id="area1_scroll" class="textContainer auto-scrolling" style="display:none;">
+ <p id="desc_text" style="font-size: 14px;padding: 5px;">
+ This is beautiful Fitness center, the largest recreational fitness center in the Ivy league. Use the left & right arrows to check out different workout areas and you will see why so many of my friends love using it. Here you can play pick-up basketball, go for a jog on the overhead track, or visit the pool when you're in mood for a swim. Lab days facility offer incredible range of recreational opportunities including club sports, fitness classes, and intramural sports. Be sure to visit those tour sports for more details on each of those exciting programs.
+ </p>
+</div>
+<script>
+function auto_start()
+{
+var elem = document.getElementById('area1_scroll'); //YOUR DIV ELEMENT WHICH YOU WANT TO SCROLL
+var scroll = 0; //SETTING INITIAL SCROLL TO 0
+elem.scrollTop=0;
+//alert(elem.scrollTop);
+window.setInterval(function(){ 
+
+ if(elem.scrollTop > scroll)
+  scroll = elem.scrollTop;
+
+ elem.scrollTo({ top: scroll, behavior: 'smooth' }) //SCROLL THE ELEMENT TO THE SCROLL VALUE WITH A SMOOTH BEHAVIOR
+ scroll += 1; //AUTOINCREMENT SCROLL
+}, 70); //THIS WILL RUN IN EVERY 50 MILISECONDS
+}
+
+</script>
     <div id="carousel1" class="carousel slide full-height" data-interval="false">
         <!-- Indicators -->
         <ol class="carousel-indicators">
